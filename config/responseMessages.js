@@ -5,6 +5,7 @@ var CONSTANTS = require('./constants');
 
 var ERROR_MESSAGES = {
     'SOMETHING_WRONG': 'Something went wrong.',
+    'TWITTER_STREAM_WARN': 'It seems twitter stream is not working, please check your auth tokens.',
     'INVALID_TIMEZONE': 'Invalid timezone.',
     'INVALID_OLD_PASSWORD': 'Invalid old password.',
     'DATA_NOT_FOUND': 'Data not found.',

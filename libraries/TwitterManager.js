@@ -16,6 +16,12 @@ var client = new Twitter({
     access_token_secret: twitterAuth.ACCESS_TOKEN_SECRET
 });
 var count = 0;
+
+setTimeout(function () {
+    if (count === 0)
+        logger.warn(config.RESPONSE_MESSAGES.ERROR_MESSAGES.TWITTER_STREAM_WARN)
+}, config.CONSTANTS.TWITTER_DELAY_WARN);
+
 function init() {
 
     client.stream('statuses/sample', {language: 'en'}, function (stream) {
@@ -64,9 +70,13 @@ function init() {
                 }
             );
         });
-
+        stream.on('disconnect', function (disconnectMessage) {
+            logger.fatal(disconnectMessage);
+        });
+        stream.on('warning', function (warning) {
+            logger.warn(warning);
+        });
         stream.on('error', function (error) {
-            //todo reset
             logger.error(error);
         });
     });
