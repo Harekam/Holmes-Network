@@ -71,7 +71,7 @@ var SEARCH_TYPE = {
     ANY: "ANY"
 };
 
-var LIMIT_INIT_TWITTER = process.env.TWIT_COUNT || 10;
+var LIMIT_INIT_TWITTER = process.env.TWIT_COUNT || 1000;
 var TWITTER_DELAY_WARN = 10000;
 
 module.exports = {
