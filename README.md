@@ -1,6 +1,6 @@
 # Holmes-Network
-
-### Prerequisites: (node.js, npm, Elasticsearch)
+#### A tool for analytics of tweets.
+###### Prerequisites: (node.js, npm, Elasticsearch)
 
 * Clone the project.
 
