@@ -2,7 +2,7 @@
  * Created by harekam on 27/08/15.
  */
 
-var CONFIG = require('../Config');
+var CONFIG = require('../config');
 var md5 = require('md5');
 var log4js = require('log4js');
 var logger = log4js.getLogger('[UTIL]');
